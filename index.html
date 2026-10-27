@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MV Contabilidade Digital LTDA — serviços contábeis em Taboão da Serra, SP.">
+  <meta name="theme-color" content="#123b5d">
+  <title>MV Contabilidade Digital LTDA | Contabilidade em Taboão da Serra</title>
+  <style>
+    :root {
+      --navy: #123b5d;
+      --blue: #176b87;
+      --teal: #13a89e;
+      --ink: #172b3a;
+      --muted: #536575;
+      --pale: #f2f7fa;
+      --line: #dce6ec;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    header { background: var(--white); border-bottom: 1px solid var(--line); }
+    .nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo {
+      width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center;
+      color: var(--white); background: linear-gradient(135deg, var(--navy), var(--teal));
+      font-weight: 800; letter-spacing: -1px; font-size: 17px;
+    }
+    .brand strong { display: block; color: var(--navy); font-size: 16px; line-height: 1.2; }
+    .brand small { color: var(--muted); font-size: 12px; }
+    nav { display: flex; gap: 24px; flex-wrap: wrap; }
+    nav a { text-decoration: none; color: var(--navy); font-weight: 700; font-size: 14px; }
+    nav a:hover, footer a:hover { text-decoration: underline; }
+    .hero { background: linear-gradient(125deg, #eff7fb 0%, #ffffff 58%, #e8f7f5 100%); padding: 82px 0 76px; }
+    .hero-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 44px; align-items: center; }
+    .eyebrow { display: inline-block; padding: 7px 12px; background: #dff3f1; color: #075d58; border-radius: 999px; font-size: 12px; font-weight: 800; letter-spacing: .5px; text-transform: uppercase; }
+    h1 { margin: 18px 0; color: var(--navy); font-size: clamp(34px, 5vw, 54px); line-height: 1.08; letter-spacing: -1.5px; }
+    .hero p { max-width: 650px; color: #344b5b; font-size: 18px; margin: 0 0 25px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn { display: inline-block; padding: 13px 19px; border-radius: 8px; text-decoration: none; font-weight: 800; }
+    .btn-primary { background: var(--navy); color: var(--white); }
+    .btn-secondary { border: 1px solid #9cb4c3; color: var(--navy); background: var(--white); }
+    .hero-card { padding: 28px; background: var(--white); border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 18px 45px rgba(18,59,93,.09); }
+    .hero-card h2 { margin: 0 0 15px; color: var(--navy); font-size: 20px; }
+    .fact { padding: 13px 0; border-bottom: 1px solid var(--line); }
+    .fact:last-child { border-bottom: 0; }
+    .fact span { display: block; color: var(--muted); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .4px; }
+    .fact strong { display: block; color: var(--ink); overflow-wrap: anywhere; }
+    section { padding: 68px 0; }
+    .section-head { max-width: 720px; margin-bottom: 30px; }
+    .section-head h2 { margin: 0 0 12px; color: var(--navy); font-size: clamp(27px, 4vw, 36px); line-height: 1.2; }
+    .section-head p { color: var(--muted); margin: 0; }
+    .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .service { padding: 24px; border: 1px solid var(--line); border-radius: 14px; background: var(--white); }
+    .service .icon { width: 42px; height: 42px; border-radius: 11px; display: grid; place-items: center; background: #e3f4f2; color: #08736d; font-size: 21px; font-weight: 800; }
+    .service h3 { margin: 15px 0 8px; color: var(--navy); font-size: 18px; }
+    .service p { margin: 0; color: var(--muted); font-size: 15px; }
+    .about { background: var(--pale); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 42px; align-items: start; }
+    .about h2 { color: var(--navy); font-size: 32px; line-height: 1.2; margin: 0 0 15px; }
+    .about p { color: #344b5b; }
+    .checklist { padding: 0; margin: 20px 0 0; list-style: none; }
+    .checklist li { margin: 10px 0; padding-left: 27px; position: relative; }
+    .checklist li::before { content: "✓"; position: absolute; left: 0; color: #08736d; font-weight: 900; }
+    .details { border: 1px solid var(--line); background: var(--white); border-radius: 14px; padding: 25px; }
+    .details h3 { margin: 0 0 15px; color: var(--navy); }
+    .detail-row { display: grid; grid-template-columns: 145px 1fr; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); }
+    .detail-row:last-child { border-bottom: 0; }
+    .detail-row strong { color: var(--navy); }
+    .detail-row span { overflow-wrap: anywhere; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .contact-card { border: 1px solid var(--line); border-radius: 14px; padding: 25px; }
+    .contact-card h3 { margin-top: 0; color: var(--navy); }
+    .contact-card p { color: var(--muted); }
+    .address { font-style: normal; color: var(--ink); }
+    .notice { margin-top: 20px; padding: 15px 17px; border-left: 4px solid var(--teal); background: #eef8f7; color: #173f42; font-size: 14px; }
+    footer { padding: 30px 0; color: #e9f1f5; background: #0c2b45; font-size: 13px; }
+    .footer-grid { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    footer p { margin: 4px 0; }
+    footer a { color: #ffffff; }
+    @media (max-width: 780px) {
+      .nav { padding: 16px 0; align-items: flex-start; flex-direction: column; }
+      nav { gap: 14px; }
+      .hero { padding: 55px 0; }
+      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .services { grid-template-columns: 1fr; }
+      section { padding: 52px 0; }
+      .detail-row { grid-template-columns: 1fr; gap: 3px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#inicio" aria-label="MV Contabilidade Digital - início">
+        <span class="logo" aria-hidden="true">MV</span>
+        <span><strong>MV Contabilidade Digital LTDA</strong><small>Contabilidade em Taboão da Serra — SP</small></span>
+      </a>
+      <nav aria-label="Navegação principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre a empresa</a>
+        <a href="#dados">Dados cadastrais</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Contabilidade e apoio empresarial</span>
+          <h1>Mais organização para a gestão da sua empresa.</h1>
+          <p>A MV Contabilidade Digital LTDA atua no segmento de atividades contábeis e está localizada em Taboão da Serra, São Paulo. Nosso objetivo é apresentar informações claras e facilitar o acesso aos serviços e dados institucionais da empresa.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#contato">Informações de contato</a>
+            <a class="btn btn-secondary" href="#servicos">Conheça os serviços</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Resumo da empresa">
+          <h2>Informações da empresa</h2>
+          <div class="fact"><span>Razão social</span><strong>MV Contabilidade Digital LTDA</strong></div>
+          <div class="fact"><span>CNPJ</span><strong>54.511.030/0001-91</strong></div>
+          <div class="fact"><span>Situação cadastral informada</span><strong>Ativa</strong></div>
+          <div class="fact"><span>Fundação informada</span><strong>28/03/2024</strong></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="servicos">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Atividades e serviços contábeis</h2>
+          <p>As atividades abaixo são apresentadas de forma geral, com base no segmento de atuação informado. A disponibilidade de cada serviço deve ser confirmada diretamente com a empresa.</p>
+        </div>
+        <div class="services">
+          <article class="service">
+            <div class="icon" aria-hidden="true">▤</div>
+            <h3>Rotinas contábeis</h3>
+            <p>Apoio às rotinas de escrituração e organização de informações contábeis, conforme o escopo contratado.</p>
+          </article>
+          <article class="service">
+            <div class="icon" aria-hidden="true">▣</div>
+            <h3>Organização documental</h3>
+            <p>Suporte na organização de documentos e dados necessários às rotinas administrativas e contábeis.</p>
+          </article>
+          <article class="service">
+            <div class="icon" aria-hidden="true">▥</div>
+            <h3>Apoio empresarial</h3>
+            <p>Informações e orientações relacionadas às demandas contábeis da empresa, de acordo com os serviços efetivamente oferecidos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="sobre">
+      <div class="wrap about-grid">
+        <div>
+          <h2>Sobre a MV Contabilidade Digital LTDA</h2>
+          <p>A MV Contabilidade Digital LTDA é uma pessoa jurídica com atividade econômica principal informada como <strong>Atividades de contabilidade (CNAE 69.20-6-01)</strong>. A empresa foi fundada, conforme os dados fornecidos, em 28 de março de 2024 e está situada em Taboão da Serra, no estado de São Paulo.</p>
+          <p>Este site tem finalidade institucional e reúne a identificação empresarial e informações gerais sobre o segmento contábil. Para confirmar escopo, condições, disponibilidade ou contratação de serviços, entre em contato pelos canais oficiais da empresa.</p>
+          <ul class="checklist">
+            <li>Identificação empresarial apresentada de forma clara.</li>
+            <li>Endereço cadastral informado no site.</li>
+            <li>Descrição geral da atividade contábil.</li>
+          </ul>
+        </div>
+        <div class="details" id="dados">
+          <h3>Dados cadastrais</h3>
+          <div class="detail-row"><strong>Razão social</strong><span>MV Contabilidade Digital LTDA</span></div>
+          <div class="detail-row"><strong>CNPJ</strong><span>54.511.030/0001-91</span></div>
+          <div class="detail-row"><strong>Data de fundação</strong><span>28/03/2024</span></div>
+          <div class="detail-row"><strong>Situação cadastral</strong><span>Ativa (conforme informação fornecida)</span></div>
+          <div class="detail-row"><strong>Atividade principal</strong><span>Atividades de contabilidade</span></div>
+          <div class="detail-row"><strong>CNAE</strong><span>69.20-6-01</span></div>
+          <div class="detail-row"><strong>Município/UF</strong><span>Taboão da Serra — SP</span></div>
+          <div class="detail-row"><strong>CEP</strong><span>06763-040</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Localização e contato</h2>
+          <p>Consulte abaixo o endereço informado para a empresa.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Endereço</h3>
+            <address class="address">
+              Avenida Aprígio Bezerra da Silva, 1525<br>
+              Chácara Agrindus<br>
+              Taboão da Serra — SP<br>
+              CEP 06763-040 — Brasil
+            </address>
+          </div>
+          <div class="contact-card">
+            <h3>Atendimento</h3>
+            <p>Os canais de telefone e e-mail não foram fornecidos para esta versão do site. Para manter as informações corretas, eles devem ser adicionados após confirmação dos contatos oficiais da empresa.</p>
+            <p><strong>Empresa:</strong> MV Contabilidade Digital LTDA<br><strong>CNPJ:</strong> 54.511.030/0001-91</p>
+          </div>
+        </div>
+        <div class="notice">
+          <strong>Transparência:</strong> os dados cadastrais desta página foram inseridos com base nas informações fornecidas pelo solicitante. Antes da publicação, confira a exatidão dos dados e acrescente telefone, e-mail, política de privacidade e termos de uso adequados à operação real da empresa.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <p><strong>MV Contabilidade Digital LTDA</strong></p>
+        <p>CNPJ: 54.511.030/0001-91</p>
+        <p>Atividades de contabilidade — CNAE 69.20-6-01</p>
+      </div>
+      <div>
+        <p>Avenida Aprígio Bezerra da Silva, 1525 — Chácara Agrindus</p>
+        <p>Taboão da Serra — SP | CEP 06763-040</p>
+        <p>© <span id="year">2026</span> MV Contabilidade Digital LTDA. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
